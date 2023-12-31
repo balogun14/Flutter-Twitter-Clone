@@ -9,7 +9,7 @@ class LogInScreen extends StatefulWidget {
 }
 
 class _LogInScreenState extends State<LogInScreen> {
-  GlobalKey<FormState> _loginKey = GlobalKey();
+  final GlobalKey<FormState> _loginKey = GlobalKey();
   @override
   Widget build(BuildContext context) {
     var emailEditingController = TextEditingController();

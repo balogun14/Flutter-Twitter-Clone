@@ -8,11 +8,17 @@ class Heading extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Image.asset(
-          'assets/images/twitter.png',
-          width: 100,
-          height: 100,
-          fit: BoxFit.cover,
+        ColorFiltered(
+          colorFilter: const ColorFilter.mode(
+            Colors.blue,
+            BlendMode.srcIn,
+          ),
+          child: Image.asset(
+            'assets/images/twitter.png',
+            width: 100,
+            height: 100,
+            fit: BoxFit.cover,
+          ),
         ),
         Text(
           "$header",
