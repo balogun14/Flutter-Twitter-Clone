@@ -10,7 +10,6 @@ class Heading extends StatelessWidget {
       children: [
         Image.asset(
           'assets/images/twitter.png',
-          colorBlendMode: BlendMode.screen,
           width: 100,
           height: 100,
           fit: BoxFit.cover,
@@ -28,17 +27,23 @@ class Input extends StatelessWidget {
   final String? hintText;
   final bool obscure;
   final TextEditingController? textEditingController;
+  final TextInputType? keyboardType;
+  final String? Function(String?)? validator;
   const Input(
       {super.key,
       this.hintText,
       required this.obscure,
-      this.textEditingController});
+      this.textEditingController,
+      this.keyboardType,
+      this.validator});
 
   @override
   Widget build(BuildContext context) {
-    return TextField(
+    return TextFormField(
+      validator: validator,
       obscureText: obscure,
       controller: textEditingController,
+      keyboardType: keyboardType ?? TextInputType.text,
       decoration: InputDecoration(
         labelText: hintText,
         constraints: const BoxConstraints(

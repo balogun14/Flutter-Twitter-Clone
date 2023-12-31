@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:twitter_clone/Screens/LogIn.dart';
-import 'package:twitter_clone/Screens/SignUp.dart';
+import 'package:twitter_clone/Screens/sign_up.dart';
 import 'package:twitter_clone/Screens/default_scrren.dart';
 
 void main() {
