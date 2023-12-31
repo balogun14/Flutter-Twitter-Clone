@@ -33,21 +33,44 @@ class SignUpScreen extends StatelessWidget {
               textEditingController: passwordEditingController,
             ),
             const SizedBox(
+              height: 10,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                const SizedBox(
+                  width: 230,
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: [
+                    GestureDetector(
+                      child: Text(
+                        "Log In",
+                        style: TextStyle(
+                            fontWeight: FontWeight.w500,
+                            color: Colors.blue[300]),
+                      ),
+                      onTap: () => Navigator.pushNamed(context, '/log-in'),
+                    ),
+                  ],
+                ),
+              ],
+            ),
+            const SizedBox(
               height: 30,
             ),
-            ButtonTheme(
-              minWidth: 40,
-              buttonColor: Colors.deepOrangeAccent,
-              child: ElevatedButton(
-                  onPressed: () {
-                    print(emailEditingController.text);
-                  },
-                  style: ElevatedButton.styleFrom(
-                      minimumSize: size,
-                      shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(20))),
-                  child: const Text("Sign Up")),
-            )
+            ElevatedButton(
+                onPressed: () {
+                  print(emailEditingController.text);
+                },
+                style: ElevatedButton.styleFrom(
+                    minimumSize: size,
+                    elevation: 10.4,
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(20))),
+                child: const Text("Sign Up"))
           ],
         ),
       ),

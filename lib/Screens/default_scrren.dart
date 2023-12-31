@@ -36,7 +36,9 @@ class _DefaultScreenState extends State<DefaultScreen> {
                 width: 20,
               ),
               ElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.pushNamed(context, '/log-in');
+                },
                 style:
                     ElevatedButton.styleFrom(backgroundColor: Colors.black45),
                 child: const Text("Log In"),
